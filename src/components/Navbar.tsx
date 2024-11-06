@@ -1,4 +1,5 @@
-"use client";
+"use client"; 
+
 import Link from "next/link";
 import React, { useState, useCallback } from "react";
 import NavLink from "./NavLink";
@@ -8,20 +9,20 @@ import MenuOverlay from "./MenuOverlay";
 const navLinks = [
   { 
     title: "Home",
-     path: "/"
-     },
+    path: "/" // This should always be '/'
+  },
   { 
     title: "About",
-     path: "./about" 
-    },
+    path: "/about" 
+  },
   {
-     title: "Projects",
-      path: "/projects"
-     },
+    title: "Projects",
+    path: "/projects"
+  },
   {
-     title: "Contact",
-      path: "/contact"
-     },
+    title: "Contact",
+    path: "/contact"
+  },
 ];
 
 const Navbar = () => {

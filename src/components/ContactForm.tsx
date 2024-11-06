@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import GoogleMapComponent from './GoogleMapComponent';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const ContactForm: React.FC = () => {
     email: "",
     phone: "",
     message: "",
+    map: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -22,9 +24,10 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen -mt-96">
+      <GoogleMapComponent/>
       <div className="w-full max-w-3xl px-4">
-        <h2 className="text-center text-4xl mb-6 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
+        <h2 className="text-center text-4xl mb-16 -mt-20 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
           Contact Me
         </h2>
         <form onSubmit={handleSubmit} className="w-full">
@@ -90,7 +93,7 @@ const ContactForm: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full max-w-xs mx-auto px-6 py-3 rounded-lg bg-gradient-to-br from-red-600 to-yellow-600 hover:bg-red-700 text-white text-lg font-semibold transition duration-300 ease-in-out shadow-lg block text-center -mb-96"
+            className="w-full max-w-xs mx-auto px-6 py-3 ml-16 rounded-lg bg-gradient-to-br from-red-600 to-yellow-600 hover:bg-red-700 text-white text-lg font-semibold transition duration-300 ease-in-out shadow-lg block text-center -mb-96"
           >
             Send a message
           </button>

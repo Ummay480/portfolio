@@ -1,78 +1,91 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
+"use client";
 
-const projects = [
+import React from "react";
+import ProjectCard from "./ProjectCard";
+
+interface Project {
+  title: string;
+  imageSrc: string;
+  isVideo: boolean;
+  link: string;
+}
+
+const projects: Project[] = [
   {
     title: "Portfolio",
-    imageSrc: '/images/portfolio-1.jpg',
-    logoSrc: '/images/nextjs-logo.svg',
-    link: '#',
+    imageSrc: "/images/portfolio-1.jpg",
+    isVideo: false,
+    link: "https://portfolio-uq3i.vercel.app/",
   },
   {
-    title: 'Real Estate',
-    imageSrc: '/images/project1.jpeg',
-    logoSrc: '/images/figma-logo.svg',
-    link: '#',
+    title: "Real Estate",
+    imageSrc: "/videos/real-estate.mp4",
+    isVideo: true,
+    link: "https://real-estate-omega-topaz.vercel.app/",
   },
   {
-    title: 'E-Commerce',
-    imageSrc: '/images/project.jpeg',
-    logoSrc: '/images/shopify-logo.svg',
-    link: '#',
-  },
-  {
-    title: 'Marketing Agency',
-    imageSrc: '/images/project2.jpeg',
-    logoSrc: '/images/wordpress.svg',
-    link: '#',
-  },
-  {
-    title: 'Resume Builder',
-    imageSrc: '/images/project4.jpeg',
-    logoSrc: '/images/ts-logo.svg',
-    link: '#',
+    title: "Resume Builder",
+    imageSrc: "/videos/resume-builder.mp4",
+    isVideo: true,
+    link: "https://resume-builder-nu-two.vercel.app/",
   },
   {
     title: "Calculator",
-    imageSrc: '/images/Calculator1.jpeg',
-    logoSrc: '/images/ts-logo.svg',
-    link: '#',
+    imageSrc: "/videos/project12.mp4",
+    isVideo: true,
+    link: "https://github.com/Ummay480/White-Calculator",
   },
   {
-    title: "Clone",
-    imageSrc: '/images/project5.jpeg',
-    logoSrc: '/images/html-logo.svg',
-    link: '#',
+    title: "E-Commerce",
+    imageSrc: "/images/e-commerce.png",
+    isVideo: false,
+    link: "#",
   },
   {
-    title: 'Clone',
-    imageSrc: '/images/project6.jpeg',
-    logoSrc: '/images/html-logo.svg',
-    link: '#',
+    title: "Clone Amazon",
+    imageSrc: "/images/Amazon.png",
+    isVideo: false,
+    link: "#",
   },
   {
-    title: 'Resume',
-    imageSrc: '/images/project7.jpeg',
-    logoSrc: '/images/html-logo.svg',
-    link: '#',
+    title: "Clone Sushiman",
+    imageSrc:"/images/sushiman.png",
+    isVideo:false,
+    link: "#",
+  },
+  {
+    title: "Landing Page",
+    imageSrc: "/images/landing-page.png",
+    isVideo: false,
+    link: "#",
+  },
+  {
+    title: "Digital Marketing",
+    imageSrc: "/images/digital-marketing.png",
+    isVideo: false,
+    link: "www.marketingjet.tech",
+  },
+  {
+    title: "Resume",
+    imageSrc: "/videos/cv.mp4",
+    isVideo: true,
+    link: "https://github.com/Ummay480/CV",
   },
 ];
 
-const ProjectSection = () => {
+const ProjectSection: React.FC = () => {
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 reflected-border">
-      <div className="bg-black py-0 px-0"> {/* Reduced padding */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"> {/* Smaller gaps */}
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              imageSrc={project.imageSrc}
-              logoSrc={project.logoSrc} 
-              link={project.link}
-            />
-          ))}
-        </div>
+    <div className="py-10 px-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            imageSrc={project.imageSrc}
+            isVideo={project.isVideo}
+            link={project.link}
+          />
+        ))}
       </div>
     </div>
   );

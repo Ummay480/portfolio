@@ -8,7 +8,7 @@ export const Header1: React.FC = () => {
       {/* Fixed "Let's Connect" image outside the moving icons */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
   <Image
-    src="/images/lets-connect.png"
+    src="/images/projects.png"
     alt="Let's Connect Icon"
     width={400}   
     height={100} 
@@ -16,62 +16,35 @@ export const Header1: React.FC = () => {
   />
 </div>
 
-
-
-      {/* Orbiting social media icons */}
       <div className="absolute inset-0 flex justify-center items-center z-0 opacity-80 rounded-full">
         <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-          {/* WhatsApp Icon */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 animate-orbit">
+         
+          <div className="absolute top-10 right-1/4 transform -translate-x-1/2 animate-orbit">
             <Image
-              src="/images/WhatsApp.png"
-              alt="WhatsApp Icon"
-              width={40}
-              height={40}
+              src="/images/ecommerce.png"
+              alt="ecommerce Icon"
+              width={150}
+              height={60}
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
             />
           </div>
-
-          {/* LinkedIn Icon */}
+        
           <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 animate-reverse-orbit">
             <Image
-              src="/images/linkedin.png"
-              alt="LinkedIn Icon"
-              width={40}
-              height={40}
+              src="/images/portfolio1.png"
+              alt="portfolio1 Icon"
+              width={100}
+              height={60}
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
             />
           </div>
-
-          {/* Instagram Icon */}
+        
           <div className="absolute top-1/2 left-0 transform -translate-y-1/2 animate-orbit">
             <Image
-              src="/images/insta.png"
-              alt="Instagram Icon"
-              width={40}
-              height={40}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-          </div>
-
-          {/* Facebook Icon */}
-          <div className="absolute top-1/2 left-full transform -translate-y-1/2 animate-reverse-orbit">
-            <Image
-              src="/images/facebook.png"
-              alt="Facebook Icon"
-              width={40}
-              height={40}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-          </div>
-
-          {/* Twitter Icon */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-orbit">
-            <Image
-              src="/images/twiter.png"
-              alt="Twitter Icon"
-              width={40}
-              height={40}
+              src="/images/api.png"
+              alt="api Icon"
+              width={100}
+              height={60}
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
             />
           </div>

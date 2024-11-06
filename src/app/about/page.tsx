@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
           <AboutSection/>
         </div>
 
-        <div className='-mb-14'>
+        <div className='my-20'>
           <Contacts/>
         </div>
     </>

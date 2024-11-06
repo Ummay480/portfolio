@@ -1,4 +1,4 @@
-// components/MenuOverlay.tsx
+"use client"
 import React from "react";
 import NavLink from "./NavLink";
 

@@ -1,16 +1,17 @@
+
 import React from 'react';
 import ContactForm from '../../components/ContactForm';
 import Contacts from "../../components/Contacts";
-import Header3 from "../../components/Headr1";
+import Header1 from "../../components/Header1";
 
 const Contactpage: React.FC = () => {
   return (
     <>
 
       <div className='max-w-full'>
-      <Header3/>
+      <Header1/>
     </div>
-      <div className='flex justify-center '>
+      <div className='flex justify-center mt-10 '>
           <ContactForm/>
         </div>
 

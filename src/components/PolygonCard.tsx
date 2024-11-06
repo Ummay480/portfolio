@@ -1,4 +1,4 @@
-"use client"; // Mark this file as a Client Component
+"use client";
 
 import React from 'react';
 import Image from 'next/image';
@@ -29,10 +29,23 @@ const gradientPolygonColors = [
 
 const CustomPolygonCard: React.FC = () => {
   const polygonCount = polygonData.length;
-  const radius = 260;
+  const radius = 150;
 
   return (
-    <div className="relative w-full h-[600px] flex justify-center items-center bg-[#121212] my-32">
+    <div className="relative w-full h-[400px] flex justify-center items-center bg-[#121212] py-20">
+      <style jsx>{`
+        @keyframes borderPulse {
+          0% { border-color: red; }
+          33% { border-color: yellow; }
+          66% { border-color: orange; }
+          100% { border-color: red; }
+        }
+        .animated-border {
+          animation: borderPulse 3s infinite;
+          border: 3px solid;
+        }
+      `}</style>
+
       {polygonData.map((polygon, index) => {
         const angle = (index / polygonCount) * 360;
         const x = radius * Math.cos((angle * Math.PI) / 180);
@@ -45,36 +58,36 @@ const CustomPolygonCard: React.FC = () => {
             style={{ transform: `translate(${x}px, ${y}px)` }}
           >
             <div
-              className="absolute ml-28 top-1"
+              className="absolute ml-14 top-2 animated-border"
               style={{
-                width: '210px',
-                height: '150px',
-                clipPath: `polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)`,
+                width: '100px',
+                height: '80px',
+                clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
                 background: gradientPolygonColors[index % gradientPolygonColors.length],
                 zIndex: 10,
-                transform: `translate(-50%, -50%)`,
-                boxShadow: '0 4px 10px rgba(0, 0, 0, 0.4)',
+                transform: 'translate(-50%, -50%)',
+                boxShadow: '0 3px 6px rgba(0, 0, 0, 0.3)',
               }}
             />
 
             <div
-              className="relative w-56 h-52 border border-red-600 rounded-lg flex flex-col justify-center items-center text-center bg-black"
+              className="relative w-28 h-28 animated-border flex flex-col justify-center items-center text-center bg-black"
               style={{
-                clipPath: `polygon(0% 1%, 100% 3%, 100% 75%, 50% 100%, 0% 75%)`,
-                padding: '10px',
+                clipPath: 'polygon(0% 1%, 100% 3%, 100% 75%, 50% 100%, 0% 75%)',
+                padding: '8px',
                 boxShadow: `
-                  0 0 10px rgba(255, 0, 0, 0.8),  /* Red glow for the reflection */
-                  0 0 20px rgba(255, 255, 0, 0.6), /* Yellow glow reflection */
-                  0 0 30px rgba(255, 255, 255, 0.3)`, /* White glow reflection */
+                  0 0 6px rgba(255, 0, 0, 0.6),
+                  0 0 10px rgba(255, 255, 0, 0.4),
+                  0 0 12px rgba(255, 255, 255, 0.2)`,
                 zIndex: 10,
-                borderRadius: '30px',
+                borderRadius: '15px',
               }}
             >
               <div
-                className="absolute top-[-20px] left-1/2 transform -translate-x-1/2"
+                className="absolute top-[-10px] left-1/2 transform -translate-x-1/2"
                 style={{
-                  width: '80px',
-                  height: '70px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   background: gradientPolygonColors[index % gradientPolygonColors.length],
                   zIndex: 20,
@@ -85,14 +98,14 @@ const CustomPolygonCard: React.FC = () => {
                 <Image
                   src={polygon.imageSrc}
                   alt={polygon.label}
-                  width={100}
-                  height={80}
+                  width={50}
+                  height={40}
                   className="object-contain rounded-full"
+                  onError={(e) => { e.currentTarget.src = '/images/default-image.png'; }} // Fallback image
                 />
               </div>
 
-              {/* Label for each card */}
-              <div className="mt-32 text-white font-semibold text-sm w-20 text-center">
+              <div className="mt-16 text-white font-semibold text-xs w-16 text-center">
                 {polygon.label}
               </div>
             </div>
@@ -101,22 +114,22 @@ const CustomPolygonCard: React.FC = () => {
       })}
 
       <div
-        className="absolute flex justify-center items-center text-center"
+        className="absolute flex justify-center items-center text-center animated-border"
         style={{
-          width: '200px',
-          height: '200px',
+          width: '120px',
+          height: '120px',
           clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)',
-          boxShadow: 'inset 0 4px 15px rgba(255, 255, 255, 0.7), 0 12px 20px rgba(255, 255, 255, 0.9)',
+          boxShadow: 'inset 0 2px 8px rgba(255, 255, 255, 0.6), 0 6px 12px rgba(255, 255, 255, 0.8)',
           zIndex: 20,
           backgroundColor: 'black',
-          border: '3px solid red',
         }}
       >
         <Image
           src="/images/api.png"
           alt="api"
-          width={220}
-          height={150}
+          width={100}
+          height={80}
+          onError={(e) => { e.currentTarget.src = '/images/default-image.png'; }} // Fallback image
         />
       </div>
     </div>
