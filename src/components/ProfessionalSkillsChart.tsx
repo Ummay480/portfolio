@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react';
 import NeonSkillCircle from './NeonSkillCircle';
@@ -13,24 +13,28 @@ const skillsData = [
 
 const ProfessionalSkillsChart: React.FC = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-8p-8 -mb-60">
-   <div className="text-center mt-20 mb-10 px-10">
-          <TypeAnimation
-            sequence={["Professional Skills", 1000]}
-            wrapper="h2"
-            speed={50}
-            className="text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
-            style={{
-              lineHeight: "2",
-              marginBottom: "1rem",
-            }}
-            repeat={Infinity}
-          />
+    <div className="flex flex-col items-center class mt-4 md:mt-8 lg:mt-10">
+      {/* Section Title */}
+      <div className="text-center mb-6 px-4">
+        <TypeAnimation
+          sequence={["Professional Skills", 1000]}
+          wrapper="h2"
+          speed={50}
+          className="text-2xl sm:text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
+          style={{
+            lineHeight: "1.5",
+            marginBottom: "1rem",
+          }}
+          repeat={Infinity}
+        />
       </div>
-      
-      {skillsData.map((skill, index) => (
-        <NeonSkillCircle key={index} skill={skill.skill} percentage={skill.percentage} />
-      ))}
+
+      {/* Skills Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl">
+        {skillsData.map((skill, index) => (
+          <NeonSkillCircle key={index} skill={skill.skill} percentage={skill.percentage} />
+        ))}
+      </div>
     </div>
   );
 };

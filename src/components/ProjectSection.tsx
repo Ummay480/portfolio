@@ -13,8 +13,8 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Portfolio",
-    imageSrc: "/images/portfolio-1.jpg",
-    isVideo: false,
+    imageSrc: "/videos/portfolio.mp4",
+    isVideo: true,
     link: "https://portfolio-uq3i.vercel.app/",
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   {
     title: "Calculator",
-    imageSrc: "/videos/project12.mp4",
+    imageSrc: "/videos/calculator.mp4",
     isVideo: true,
     link: "https://github.com/Ummay480/White-Calculator",
   },
@@ -67,9 +67,15 @@ const projects: Project[] = [
   },
   {
     title: "Resume",
-    imageSrc: "/videos/cv.mp4",
-    isVideo: true,
-    link: "https://github.com/Ummay480/CV",
+    imageSrc: "/images/cv.png",
+    isVideo: false,
+    link: "https://cv-ruby-five.vercel.app/",
+  },
+  {
+    title: "Resume",
+    imageSrc: "/images/cv1.png",
+    isVideo: false,
+    link: "https://kulsoom-resume.vercel.app/",
   },
 ];
 
