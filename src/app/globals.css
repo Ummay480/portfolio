@@ -15,6 +15,7 @@
   }
 }
 
+
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -38,6 +39,24 @@ body {
   padding: 5px;
   animation: neon-glow 2s infinite alternate;
   border: none; /* Remove solid border */
+}
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
 }
 
 /* Optional: For a smaller, transparent border, replace 'none' with the following: */

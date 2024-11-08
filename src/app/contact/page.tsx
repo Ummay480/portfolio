@@ -19,7 +19,7 @@ const Contactpage: React.FC = () => {
           <ContactForm/>
         </div>
 
-    <div className='flex justify-center mb-60 lg:mb-20 '>
+    <div className='flex justify-center mb-20 '>
       <Contacts/>
     </div>
 

@@ -11,7 +11,10 @@ const AboutPage: React.FC = () => {
       <Header/>
     </div>
   
-      <div className=' flex-center justify-center mt-96 -mx-4 '>
+        {/* Spacer div visible only on larger screens */}
+        <div className="hidden lg:block" style={{ height: '400px' }}></div>
+
+      <div className=' flex-center justify-center mt-20 -mx-4 '>
           <AboutSection/>
         </div>
 

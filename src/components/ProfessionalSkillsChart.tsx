@@ -20,7 +20,7 @@ const ProfessionalSkillsChart: React.FC = () => {
           sequence={["Professional Skills", 1000]}
           wrapper="h2"
           speed={50}
-          className="text-5xl sm:text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
+          className="text-5xl sm:text-3xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
           style={{
             lineHeight: "1.5",
             marginBottom: "1rem",

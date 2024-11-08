@@ -1,11 +1,10 @@
 // pages/index.tsx
 import React from "react";
 import HeroSection from "../components/HeroSection"; 
-import Navbar from "../components/Navbar"; 
 import AboutMe from "../components/AboutSection"; 
 import ProjectSection from "../components/ProjectSection";
 import Skills from '../components/Skills';
-import ContactUs from '../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 import Contacts from "../components/Contacts"
 import PolygonCard from '../components/PolygonCard';
 import ProfessionalSkillsChart from "../components/ProfessionalSkillsChart"
@@ -48,7 +47,9 @@ const HomePage: React.FC = () => {
       <ProfessionalSkillsChart/>
     </div>
         {/* ContactUs Section */}
-      <ContactUs/>
+        <div className="-mt-40">
+      <ContactForm/>
+      </div>
 
             <Contacts/>
    </main>

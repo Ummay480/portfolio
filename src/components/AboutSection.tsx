@@ -96,7 +96,7 @@ const AboutSection: React.FC = () => {
           <div className="grid grid-cols-2 justify-center ml-10 gap-2 mt-4">
             {/* Tab Block 1 - Skills */}
             <div
-              className={`p-4 w-2/3 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
+              className={`p-3  w-2/3 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
               onMouseEnter={() => {
                 document.getElementById('skills-content')!.style.display = 'block';
               }}
@@ -104,7 +104,7 @@ const AboutSection: React.FC = () => {
                 document.getElementById('skills-content')!.style.display = 'none';
               }}
             >
-              <h3 className="text-lg font-bold">
+              <h3 className="text-sm lg:text-lg font-bold">
                 {TAB_DATA[0].icon}
                 {TAB_DATA[0].title}
               </h3>
@@ -115,7 +115,7 @@ const AboutSection: React.FC = () => {
 
             {/* Tab Block 2 - Education */}
             <div
-              className={`p-4 w-3/2 -ml-20 mr-24 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
+              className={`p-2 lg:p4 w-3/1 lg:w-3/3  -ml-10 lg:-ml-16 mr-10 lg:mr-24 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
               onMouseEnter={() => {
                 document.getElementById('education-content')!.style.display = 'block';
               }}
@@ -123,7 +123,7 @@ const AboutSection: React.FC = () => {
                 document.getElementById('education-content')!.style.display = 'none';
               }}
             >
-              <h3 className="text-lg font-bold">
+              <h3 className="text-sm lg:text-lg font-bold">
                 {TAB_DATA[1].icon}
                 {TAB_DATA[1].title}
               </h3>
@@ -134,7 +134,7 @@ const AboutSection: React.FC = () => {
 
             {/* Tab Block 3 - Certifications */}
             <div
-              className={`p-4 w-3/2 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
+              className={`p-2 lg:p-4 w-3/1 lg:w-4/2 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
               onMouseEnter={() => {
                 document.getElementById('certifications-content')!.style.display = 'block';
               }}
@@ -142,7 +142,7 @@ const AboutSection: React.FC = () => {
                 document.getElementById('certifications-content')!.style.display = 'none';
               }}
             >
-              <h3 className="text-lg font-bold">
+              <h3 className="text-sm lg:text-lg font-bold">
                 {TAB_DATA[2].icon}
                 {TAB_DATA[2].title}
               </h3>
@@ -153,7 +153,7 @@ const AboutSection: React.FC = () => {
 
             {/* Tab Block 4 - Expertise */}
             <div
-              className={`p-4 w-2/3 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
+              className={`p-2 lg:p4 w-3/1 lg:w-2/3 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer`}
               onMouseEnter={() => {
                 document.getElementById('expertise-content')!.style.display = 'block';
               }}
@@ -161,7 +161,7 @@ const AboutSection: React.FC = () => {
                 document.getElementById('expertise-content')!.style.display = 'none';
               }}
             >
-              <h3 className="text-lg font-bold">
+              <h3 className="text-sm lg:text-lg font-bold">
                 {TAB_DATA[3].icon}
                 {TAB_DATA[3].title}
               </h3>
