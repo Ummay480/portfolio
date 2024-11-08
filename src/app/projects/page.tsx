@@ -20,7 +20,7 @@ export default function Projects() {
           <ProjectSection/>
         </div>
 
-        <div className='mt-20'>
+        <div className='mt-20 mb-40 lg:mb-10'>
         <Contacts/>
       </div>
     </>

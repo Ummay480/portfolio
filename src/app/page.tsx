@@ -16,8 +16,6 @@ const HomePage: React.FC = () => {
     <main className="flex min-h-screen flex-col bg-[#121212] items-center justify-center">
       <div className="text-center">
     
-      {/* Navbar */}
-      <Navbar />
 </div>
 
       {/* Hero Section */}
@@ -33,7 +31,7 @@ const HomePage: React.FC = () => {
       {/* Project Section */}
       <div className="min-h-screenbg-[#121212] flex flex-col items-center py-5 my-10">
            
-           <h1  className="text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text mb-14">My Projects</h1>
+           <h1  className="text-4xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text mb-14">My Projects</h1>
          <PolygonCard />
         </div>
         

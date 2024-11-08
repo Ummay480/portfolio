@@ -11,11 +11,11 @@ const AboutPage: React.FC = () => {
       <Header/>
     </div>
   
-      <div>
+      <div className=' flex-center justify-center mt-96 -mx-4 '>
           <AboutSection/>
         </div>
 
-        <div className='my-20'>
+        <div className='mt-20 mb-10 lg:mb-0'>
           <Contacts/>
         </div>
     </>

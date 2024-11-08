@@ -8,14 +8,18 @@ const Contactpage: React.FC = () => {
   return (
     <>
 
-      <div className='max-w-full'>
+      <div className='max-w-full mb-20'>
       <Header1/>
     </div>
-      <div className='flex justify-center mt-10 '>
+
+       {/* Spacer div visible only on larger screens */}
+       <div className="hidden lg:block" style={{ height: '400px' }}></div>
+
+      <div className='flex justify-center mt-60 lg:mt-20'>
           <ContactForm/>
         </div>
 
-    <div>
+    <div className='flex justify-center mb-60 lg:mb-20 '>
       <Contacts/>
     </div>
 

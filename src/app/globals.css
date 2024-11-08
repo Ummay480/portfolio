@@ -21,48 +21,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   margin: 0;
-}
+}/* Animation for neon glow */
 @keyframes neon-glow {
   0%, 100% {
-    box-shadow: 0 0 15px #ff6b6b, 0 0 30px #9204f0, 0 0 45px #ff6b6b, 0 0 60px #000000e5;
+    box-shadow: 0 0 15px #3b04ff, 0 0 30px #9204f0, 0 0 45px #eca306, 0 0 60px #3303e0e5;
   }
   50% {
-    box-shadow: 0 0 20px #ffd56b, 0 0 40px #1c03ff, 0 0 60px #b3ff6b, 0 0 80px #0f0f0f;
+    box-shadow: 0 0 20px #ffd56b, 0 0 40px #1c03ff, 0 0 60px #f3a601, 0 0 80px #0f0f0f;
   }
 }
 
+/* Profile image styling */
 .neon-border {
   position: relative;
   border-radius: 50%;
   padding: 5px;
   animation: neon-glow 2s infinite alternate;
-}
-/* styles.css */
-.animated-border {
-  animation: borderPulse 3s infinite;
-  border: 3px solid; /* Set the border width */
-}
-/* Keyframe animation for border pulse */
-@keyframes borderPulse {
-  0% {
-    border-color: red;
-  }
-  33% {
-    border-color: yellow;
-  }
-  66% {
-    border-color: orange;
-  }
-  100% {
-    border-color: red;
-  }
+  border: none; /* Remove solid border */
 }
 
-/* Animated border class */
-.animated-border {
-  animation: borderPulse 3s infinite;
-  border: 3px solid;
-}
+/* Optional: For a smaller, transparent border, replace 'none' with the following: */
+/* border: 1px solid transparent; */
+
 
 /* Polygon card styling */
 .polygon-card {
@@ -302,4 +282,29 @@ body {
     border-color: rgba(255, 204, 102, 0.7);
     box-shadow: 0 0 15px rgba(255, 204, 102, 0.7), 0 0 25px rgba(255, 204, 102, 0.7);
   }
+}
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+@keyframes reverse-orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(100px) rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 10s linear infinite;
+}
+
+.animate-reverse-orbit {
+  animation: reverse-orbit 12s linear infinite;
 }

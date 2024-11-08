@@ -24,10 +24,10 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen class -mt-96 md:mt-8 lg:mt-10">
+    <div className="flex justify-center items-center min-h-screen class md:mt-8 lg:-mt-96 mb-40 lg:mb-10">
       <GoogleMapComponent/>
       <div className="w-full max-w-3xl px-4">
-        <h2 className="text-center text-4xl mb-16 -mt-20 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
+        <h2 className="text-center text-4xl lg:5xl mb-16 -mt-20 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
           Contact Me
         </h2>
         <form onSubmit={handleSubmit} className="w-full">

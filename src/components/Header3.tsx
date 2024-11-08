@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Header1: React.FC = () => {
   return (
-    <div className="relative w-full px-4 py-2 md:px-10 md:py-12 bg-gradient-to-br from-red-600 to-yellow-600 -mt-10 md:mt-5 lg:mt-5">
+    <div className="fixed top-0 left-0 right-0 md:py-10 bg-gradient-to-br from-red-600 to-yellow-600 flex flex-col items-center justify-center">
       {/* Fixed "Let's Connect" image outside the moving icons */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
   <Image
@@ -19,33 +19,35 @@ export const Header1: React.FC = () => {
       <div className="absolute inset-0 flex justify-center items-center z-0 opacity-80 rounded-full">
         <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
          
-          <div className="absolute top-10 right-1/4 transform -translate-x-1/2 animate-orbit">
+        <div className="sparkle transition-transform duration-300 hover:scale-110 -mt-2">
             <Image
               src="/images/ecommerce.png"
               alt="ecommerce Icon"
-              width={150}
-              height={60}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
+              width={100}
+              height={100}
+              className="w-20 md:w-28 lg:w-32"
+              />
           </div>
         
-          <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 animate-reverse-orbit">
+          <div className="sparkle transition-transform duration-300 hover:scale-110 -mt-4">
             <Image
               src="/images/portfolio1.png"
               alt="portfolio1 Icon"
-              width={100}
-              height={60}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+              width={120}
+              height={80}
+              
+            className="w-20 md:w-28 lg:w-32"
             />
           </div>
         
-          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 animate-orbit">
+          <div className="sparkle transition-transform duration-300 hover:scale-110">
             <Image
               src="/images/api.png"
               alt="api Icon"
-              width={100}
-              height={60}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+              width={120}
+              height={80}
+              
+            className="w-20 md:w-28 lg:w-32"
             />
           </div>
         </div>

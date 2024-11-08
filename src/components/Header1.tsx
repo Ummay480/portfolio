@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Header1: React.FC = () => {
   return (
-    <div className="relative w-full px-4 py-2 md:px-10 md:py-12 bg-gradient-to-br from-red-600 to-yellow-600 -mt-10 md:mt-5 lg:mt-5">
+  <div className="fixed top-0 left-0 right-0  md:px-10 md:py-12 bg-gradient-to-br from-red-600 to-yellow-600">
       {/* Fixed "Let's Connect" image outside the moving icons */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
   <Image
