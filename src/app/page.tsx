@@ -42,12 +42,12 @@ const HomePage: React.FC = () => {
       
       <Skills/>
 
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center ">
         
       <ProfessionalSkillsChart/>
     </div>
         {/* ContactUs Section */}
-        <div className="-mt-40">
+        <div className="-mt-40 lg:mt-20">
       <ContactForm/>
       </div>
 
