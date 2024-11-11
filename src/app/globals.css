@@ -15,14 +15,26 @@
   }
 }
 
-
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   margin: 0;
-}/* Animation for neon glow */
+  overflow-x:hidden;
+}
+h2 {
+  text-align: center;
+  font-size: 2.25rem; /* Adjust for responsive sizing */
+  font-weight: 800;
+  background: linear-gradient(to right, #ef4444, #f59e0b); /* Red to yellow */
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+/* Animation for neon glow */
 @keyframes neon-glow {
   0%, 100% {
     box-shadow: 0 0 15px #3b04ff, 0 0 30px #9204f0, 0 0 45px #eca306, 0 0 60px #3303e0e5;
@@ -248,6 +260,7 @@ body {
     border-color: rgba(0, 255, 255, 1);
   }
 }
+
 
 /* Main Card Styling */
 .project-card {

@@ -30,7 +30,7 @@ const ProfessionalSkillsChart: React.FC = () => {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl  mb-40 lg:-mb-60">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8 max-w-4xl  mb-40 lg:-mb-60 -ml-14 ">
         {skillsData.map((skill, index) => (
           <NeonSkillCircle key={index} skill={skill.skill} percentage={skill.percentage} />
         ))}

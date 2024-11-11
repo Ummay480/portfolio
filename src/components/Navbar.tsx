@@ -23,7 +23,7 @@ const Navbar = () => {
   const closeNavbar = () => setNavbarOpen(false);
 
   return (
-    <nav className="fixed top-0 z-20 w-full bg-[#121212] border border-[#33353F] mx-auto md:max-w-4xl lg:max-w-6xl">
+    <nav className="fixed top-0 z-20 w-full bg-[#121212] mx-auto md:max-w-4xl lg:max-w-6xl">
       <div className="container flex items-center justify-between mx-auto px-20 md:px-8 py-6 lg:py-4">
         <Link href="/" className="text-3xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text -ml-20">
           Ummay.K

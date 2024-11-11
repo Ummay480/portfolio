@@ -24,10 +24,10 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen class  -mt-72 md:mt-80 lg:-mt-96 mb-0 lg:-mb-40">
+    <div className="flex justify-center items-center min-h-screen class  -mt-72 md:mt-80 lg:-mt-96 -mb-32 lg:-mb-40 -ml-10">
    
       <div className="w-full max-w-3xl px-4">
-        <h2 className="text-center text-4xl lg:5xl mb-16 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text -mt-96">
+        <h2 className="text-center text-3xl md:5xl lg:6xl mb-16 font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text -mt-96">
           Contact Me
         </h2>
         <form onSubmit={handleSubmit} className="w-full">
@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="flex-1 px-4 py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-lg"
+              className="flex-1  px-0 lg:px-4 py-2 lg:py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-sm lg:text-lg"
             />
           </div>
 
@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="flex-1 px-4 py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-lg"
+              className="flex-1  px-0 lg:px-4 py-2 lg:py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-sm lg:text-lg"
             />
           </div>
 
@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="flex-1 px-4 py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-lg"
+              className="flex-1  px-0 lg:px-4 py-2 lg:py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-sm lg:text-lg"
             />
           </div>
 
@@ -86,14 +86,14 @@ const ContactForm: React.FC = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows={4}
-              className="flex-1 px-4 py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-lg"
+              rows={3}
+              className="flex-1 px-4 py-2 lg:py-3 text-gray-700 placeholder-gray-400 bg-white border-2 border-gray-300 rounded shadow-lg text-sm lg:text-lg"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full max-w-xs mx-auto px-6 py-3 ml-16 rounded-lg bg-gradient-to-br from-red-600 to-yellow-600 hover:bg-red-700 text-white text-lg font-semibold transition duration-300 ease-in-out shadow-lg block text-center -mb-96"
+            className="wrap-flex justify-center w-full max-w-xs mx-auto lg:px-6 py-3 ml-16 rounded-lg bg-gradient-to-br from-red-600 to-yellow-600 hover:bg-red-700 text-white text-sm lg:text-lg font-semibold transition duration-300 ease-in-out shadow-lg block text-center -mb-96"
           >
             Send a message
           </button>

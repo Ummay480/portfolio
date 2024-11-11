@@ -27,7 +27,7 @@ const Skills = () => {
     <section className="py-12 bg-[#121212]">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
-          <span className="text-4xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
+          <span className="text-3xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
             My Skills
           </span>
         </h2>

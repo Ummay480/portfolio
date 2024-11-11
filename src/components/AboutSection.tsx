@@ -78,7 +78,7 @@ const AboutSection: React.FC = () => {
             sequence={["About Me", 1000]}
             wrapper="h2"
             speed={50}
-            className="text-4xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
+            className="text-3xl lg:5xl font-bold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text"
             style={{
               lineHeight: "2",
               marginBottom: "1rem",
