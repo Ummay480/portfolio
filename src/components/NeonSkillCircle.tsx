@@ -80,7 +80,7 @@ const NeonSkillCircle: React.FC<NeonSkillCircleProps> = ({ skill, percentage }) 
       </div>
 
  {/* Mobile Version */}
-<div className="relative flex sm:hidden items-center justify-center w-28 h-28 m-2 ml-6 ">
+<div className="relative flex sm:hidden items-center justify-center w-28 h-28 pl-10  ">
   <svg className="absolute w-full h-full">
     <defs>
       <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">

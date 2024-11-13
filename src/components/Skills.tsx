@@ -33,21 +33,30 @@ const Skills = () => {
         </h2>
 
         {/* Container for skill logos with globe rotation */}
-        <div className="relative w-full h-72 animate-rotate-globe flex justify-center items-center -mb-96">
+        <div className="relative w-full lg:h-96 h-72 animate-rotate-globe flex justify-center items-center mt-10 -mb-96">
           {skills.map((skill, index) => (
             <div
               key={index}
               className="skill-item flex justify-center items-center"
               style={{
-                animationDelay: `${index * 0.5}s`, // Staggered effect
+                animationDelay: `${index * 0.9}s`, // Staggered effect
               }}
             >
+              {/* Large logos for desktop */}
               <Image
                 src={skill.image}
                 alt={`${skill.title} logo`}
-                className="skill-logo p-10 gap-6"
+                className="skill-logo p-10 gap-6 hidden lg:block"
                 width={200}
                 height={200}
+              />
+              {/* Small logos for mobile */}
+              <Image
+                src={skill.image}
+                alt={`${skill.title} logo`}
+                className="skill-logo p-6 gap-6 lg:hidden"
+                width={150}
+                height={80}
               />
             </div>
           ))}
