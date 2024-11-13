@@ -26,7 +26,7 @@ const NeonSkillCircle: React.FC<NeonSkillCircleProps> = ({ skill, percentage }) 
   }, [percentage]);
 
   return (
-    <div className="relative flex items-center justify-center w-52 lg:w-40 h-60 lg:h-40 m-4">
+    <div className="relative flex items-center justify-center w-40 h-40 m-4">
       {/* SVG Circle with Neon Glow */}
       <svg className="absolute w-full h-full">
         <defs>
@@ -69,7 +69,7 @@ const NeonSkillCircle: React.FC<NeonSkillCircleProps> = ({ skill, percentage }) 
       {/* Skill Label and Percentage */}
       <div className="absolute flex flex-col items-center text-white ">
         <motion.span
-          className="text-1xl lg:text-3xl font-bold"
+          className="text-3xl font-bold"
           animate={{ opacity: [0, 1], scale: [0.8, 1] }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
