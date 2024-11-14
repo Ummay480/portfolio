@@ -49,8 +49,8 @@ const projects: Project[] = [
   },
   {
     title: "Clone Sushiman",
-    imageSrc:"/images/sushiman.png",
-    isVideo:false,
+    imageSrc: "/images/sushiman.png",
+    isVideo: false,
     link: "#",
   },
   {
@@ -81,8 +81,8 @@ const projects: Project[] = [
 
 const ProjectSection: React.FC = () => {
   return (
-    <div className="py-10 px-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className="flex justify-center items-center py-10 px-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-lg">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -93,7 +93,7 @@ const ProjectSection: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

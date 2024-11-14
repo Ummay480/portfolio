@@ -7,14 +7,14 @@ import Contacts from "../../components/Contacts";
 const AboutPage: React.FC = () => {
   return (
 <>
-    <div className='max-w-full'>
+    <div className='max-w-full lg:-mt-72 '>
       <Header/>
     </div>
   
         {/* Spacer div visible only on larger screens */}
         <div className="hidden lg:block" style={{ height: '400px' }}></div>
 
-      <div className=' flex-center justify-center mt-20 -mx-4 '>
+      <div className=' flex-center justify-center mt-96 -mx-4 '>
           <AboutSection/>
         </div>
 

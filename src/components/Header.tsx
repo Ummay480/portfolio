@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Header: React.FC = () => {
   return (
-    <div className="fixed top-0 left-0 right-0  md:px-10 md:py-12 bg-gradient-to-br from-red-600 to-yellow-600">
+    <div className="fixed top-14 left-0 right-0 -mt-10 md:px-10 pt-10 md:py-12 z-10 backdrop-blur-lg bg-yellow-900 bg-opacity-96 shadow-lg border border-white/20 rounded-lg">
       {/* Fixed "About Me" image outside the icons */}
 
       {/* Static social media icons with consistent size */}

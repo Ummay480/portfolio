@@ -23,9 +23,12 @@ const Navbar = () => {
   const closeNavbar = () => setNavbarOpen(false);
 
   return (
-    <nav className="fixed top-0 z-20 w-full bg-[#121212] mx-auto md:max-w-4xl lg:max-w-6xl">
-      <div className="container flex items-center justify-between mx-auto px-20 md:px-8 py-6 lg:py-4">
-        <Link href="/" className="text-3xl lg:5xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text -ml-20">
+    <nav className="fixed top-0 z-20 right-0 laft-0 w-full bg-gradient-to-r from-red-600 to-yellow-600 -ml-5 px-8 lg:px-40">
+      <div className="container mx-auto flex items-center justify-between px-6 md:px-8 py-4 md:max-w-4xl lg:max-w-6xl">
+        <Link
+          href="/"
+          className="text-3xl font-extrabold text-#ffff bg-clip-text -ml-6 md:-ml-20 lg:ml-40"
+        >
           Ummay.K
         </Link>
 
@@ -35,18 +38,18 @@ const Navbar = () => {
             onClick={toggleNavbar}
             aria-expanded={navbarOpen ? "true" : "false"}
             aria-label={navbarOpen ? "Close menu" : "Open menu"}
-            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            className="flex items-center px-3 py-2 border rounded border-slate-200 text-#ffff hover:text-white hover:border-white"
           >
             {navbarOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
           </button>
         </div>
 
         {/* Navigation links for desktop */}
-        <div className={`md:block hidden md:w-auto`}>
-          <ul className="flex flex-col md:flex-row items-center md:space-x-8 p-4 md:p-0">
+        <div className="hidden md:block">
+          <ul className="flex flex-row items-center space-x-8">
             {navLinks.map((link, index) => (
-              <li key={index} className="w-full md:w-auto">
-                <NavLink href={link.path} title={link.title} onClick={closeNavbar} />
+              <li key={index}>
+                <NavLink href={link.path} title={link.title} onClick={closeNavbar} className="text-gray-900" />
               </li>
             ))}
           </ul>
