@@ -55,7 +55,7 @@ const Skills = () => {
                 src={skill.image}
                 alt={`${skill.title} logo`}
                 className="skill-logo p-6 gap-6 lg:hidden"
-                width={150}
+                width={120}
                 height={80}
               />
             </div>

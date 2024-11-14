@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation"; 
-import { FaCode, FaGraduationCap, FaCertificate, FaClipboardList } from 'react-icons/fa'; 
+import { TypeAnimation } from "react-type-animation";
+import { FaCode, FaGraduationCap, FaCertificate, FaClipboardList } from 'react-icons/fa';
 
 // Define the structure of each tab's data
 interface TabData {
@@ -69,6 +69,8 @@ const TAB_DATA: TabData[] = [
 ];
 
 const AboutSection: React.FC = () => {
+  const [hoveredTab, setHoveredTab] = useState<string | null>(null);
+
   return (
     <section className="bg-[#121212] text-white py-8 px-4 xl:px-16">
       <div className="md:grid md:grid-cols-2 items-center">
@@ -101,38 +103,57 @@ const AboutSection: React.FC = () => {
             designs.
           </p>
 
-          {/* Grid Layout for Tabs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {TAB_DATA.map((tab) => (
-              <div
-                key={tab.id}
-                className={`p-4 rounded-lg bg-gradient-to-r transition-shadow duration-300 shadow-lg hover:shadow-xl cursor-pointer ${
-                  tab.id === "skills"
-                    ? "from-blue-500 to-green-500"
-                    : tab.id === "education"
-                    ? "from-purple-500 to-pink-500"
-                    : tab.id === "certifications"
-                    ? "from-orange-500 to-yellow-500"
-                    : "from-teal-500 to-cyan-500"
-                }`}
-                onMouseEnter={() => {
-                  const element = document.getElementById(`${tab.id}-content`);
-                  if (element) element.style.display = 'block';
-                }}
-                onMouseLeave={() => {
-                  const element = document.getElementById(`${tab.id}-content`);
-                  if (element) element.style.display = 'none';
-                }}
-              >
-                <h3 className="text-lg font-bold flex items-center">
-                  {tab.icon}
-                  {tab.title}
-                </h3>
-                <div id={`${tab.id}-content`} className="mt-2 hidden">
-                  {tab.content}
-                </div>
-              </div>
-            ))}
+          {/* Grid Layout for Tabs (Colorful Bricks) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* First Row (Mobile: First and Second Brick) */}
+            <div
+              className="col-span-1 md:col-span-1 p-4 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg"
+              onMouseEnter={() => setHoveredTab("skills")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              <h3 className="text-lg font-bold flex items-center text-gray-300">
+                {TAB_DATA[0].icon}
+                {TAB_DATA[0].title}
+              </h3>
+              {hoveredTab === "skills" && <div className="mt-2">{TAB_DATA[0].content}</div>}
+            </div>
+
+            <div
+              className="col-span-1 md:col-span-2 p-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg"
+              onMouseEnter={() => setHoveredTab("education")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              <h3 className="text-lg font-bold flex items-center text-gray-300">
+                {TAB_DATA[1].icon}
+                {TAB_DATA[1].title}
+              </h3>
+              {hoveredTab === "education" && <div className="mt-2">{TAB_DATA[1].content}</div>}
+            </div>
+
+            {/* Second Row (Mobile: Third and Fourth Brick) */}
+            <div
+              className="col-span-1 md:col-span-2 p-4 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg"
+              onMouseEnter={() => setHoveredTab("certifications")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              <h3 className="text-lg font-bold flex items-center text-gray-300">
+                {TAB_DATA[2].icon}
+                {TAB_DATA[2].title}
+              </h3>
+              {hoveredTab === "certifications" && <div className="mt-2">{TAB_DATA[2].content}</div>}
+            </div>
+
+            <div
+              className="col-span-1 md:col-span-1 p-4 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg"
+              onMouseEnter={() => setHoveredTab("expertise")}
+              onMouseLeave={() => setHoveredTab(null)}
+            >
+              <h3 className="text-lg font-bold flex items-center text-gray-300">
+                {TAB_DATA[3].icon}
+                {TAB_DATA[3].title}
+              </h3>
+              {hoveredTab === "expertise" && <div className="mt-2">{TAB_DATA[3].content}</div>}
+            </div>
           </div>
         </div>
       </div>
