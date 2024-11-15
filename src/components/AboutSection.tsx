@@ -108,7 +108,7 @@ const AboutSection: React.FC = () => {
             <div className="grid grid-cols-12 gap-4">
               {/* First Row */}
               <div
-                className="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-4 text-[#FFFF]"
+                className="p-4 -mr-2 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-4 text-[#FFFF]"
                 onMouseEnter={() => setHoveredTab("skills")}
                 onMouseLeave={() => setHoveredTab(null)}
               >
@@ -133,7 +133,7 @@ const AboutSection: React.FC = () => {
 
               {/* Second Row */}
               <div
-                className="p-4 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-8 text-[#FFFF]"
+                className="p-4 mr-6 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-8 text-[#FFFF]"
                 onMouseEnter={() => setHoveredTab("certifications")}
                 onMouseLeave={() => setHoveredTab(null)}
               >
@@ -145,7 +145,7 @@ const AboutSection: React.FC = () => {
               </div>
 
               <div
-                className="p-4 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-4 text-[#FFFF]"
+                className="p-4 -ml-8 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-500 shadow-lg hover:shadow-xl cursor-pointer text-sm md:text-lg col-span-4 text-[#FFFF]"
                 onMouseEnter={() => setHoveredTab("expertise")}
                 onMouseLeave={() => setHoveredTab(null)}
               >
